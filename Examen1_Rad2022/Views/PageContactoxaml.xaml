@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="Examen1_Rad2022.Views.PageContactoxaml">
+    
+    
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Black">
+            <Label Text="Ingreso de datos ucenm"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" FontSize="Large" />
+
+            
+            
+            <Label Text="Nombre" FontSize="Medium"/>
+            <Entry x:Name="txtNombre" Placeholder="Ingrese el nombre del contacto" Keyboard="Text" FontSize="Medium" TextColor="WhiteSmoke"/>
+
+            <Label Text="Telefono" FontSize="Medium"/>
+            <Entry x:Name="txtTelefono" Placeholder="Ingrese el telefono del contacto" Keyboard="Telephone"/>
+
+            <Label Text="Edad" FontSize="Medium"/>
+            <Entry x:Name="txtEdad" Placeholder="Ingrese la edad de su contacto" Keyboard="Numeric" FontSize="Medium" TextColor="WhiteSmoke"/>
+
+            <Label Text="Pais" FontSize="Medium"/>
+            <Picker x:Name="pkPais" SelectedIndexChanged="pickerPais_SelectedIndexChanged"/>
+
+            <Label Text="Nota" FontSize="Medium"/>
+            <Entry x:Name="txtNota" Placeholder="Ingrese una referencia para el contacto" Keyboard="Text" FontSize="Medium" TextColor="WhiteSmoke"/>
+
+            <Button x:Name="btnSalvar" Text="Salvar Contacto" Clicked="btnSalvar_Clicked" BackgroundColor="Green" TextColor="White" FontSize="Medium"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

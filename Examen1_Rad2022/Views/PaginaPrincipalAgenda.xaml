@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1_Rad2022.Views.PaginaPrincipalAgenda">
+
+    <ContentPage.ToolbarItems >
+        <ToolbarItem Text="Agregar Contacto " x:Name="tbiAgregar" Clicked="tbiAgregar_Clicked"/>
+        <ToolbarItem Text="Ver pocision geografica" x:Name="tbiMapa" Clicked="tbiMapa_Clicked"/>
+    </ContentPage.ToolbarItems>
+  
+    <CollectionView x:Name="ListaContactos" Margin="20" SelectionMode="Single"
+                    SelectionChanged="ListaContactos_SelectionChanged" >
+        
+        <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Vertical" ItemSpacing="15"/>
+        </CollectionView.ItemsLayout>
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout>
+                    <Label Text="{Binding Nombre}" FontSize="Medium" TextColor="Black" BackgroundColor="BlanchedAlmond"/>
+                    <Label Text="{Binding Telefono}" FontSize="Small" TextColor="CadetBlue"/>
+                    <Label Text="{Binding Nota}" FontSize="Small" TextColor="Bisque"/>
+                    <Label Text="{Binding Pais}" FontSize="Small" TextColor="Bisque"/>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+</ContentPage>
